@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<table class="container">
+  <thead>
+    <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>City</th>
+    <th>Gender</th>
+    <th>Department</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of employees">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.city}}</td>
+      <td>{{item.gender}}</td>
+      <td>{{item.department}}</td>
+      <td>
+        <div class="row">
+            <div class="col-3">
+              <button type="button" (click)="deleteUser(item.id)" class="btn btn-danger">Delete</button>
+            </div>
+            <!-- <div class="col-3">
+                <button type="button" >Update</button>
+            </div> -->
+        </div>
+        
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
